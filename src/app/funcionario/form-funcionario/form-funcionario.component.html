@@ -1,0 +1,16 @@
+<po-dynamic-form #dynamicForm
+  p-auto-focus="nome"
+  [p-fields]="fields"
+  [p-value]="funcionario">
+</po-dynamic-form>
+
+<div class="po-row">
+  <po-button
+    class="po-md-3"
+    p-label="Cadastrar"
+    [p-disabled]="dynamicForm?.form.invalid"
+    (p-click)="salvar(funcionario)"
+    >
+    
+  </po-button>
+</div>

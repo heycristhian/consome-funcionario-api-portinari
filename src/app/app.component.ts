@@ -11,15 +11,14 @@ import { Router } from '@angular/router';
 export class AppComponent {
 
   readonly menus: Array<PoMenuItem> = [
-    {label: 'Início', action: this.onClick.bind(this) },
-    {label: 'Cadastrar', action: this.onClick.bind(this)},
-    {label: 'Consultar', action: this.onClick.bind(this)}
+    {label: 'Consultar', action: this.onClick.bind(this, 'list-funcionarios')},
+    {label: 'Cadastrar', action: this.onClick.bind(this, 'form-funcionario')}
   ];
 
   constructor(private router: Router) { }
 
-  private onClick() {
-    this.router.navigateByUrl('list-funcionarios');
+  private onClick(url: string) {
+    this.router.navigateByUrl(url);
   }
 
 }
