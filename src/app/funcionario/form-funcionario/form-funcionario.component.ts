@@ -53,7 +53,6 @@ export class FormFuncionarioComponent implements OnInit {
       }
       );
     this.poNotification.success('Funcionário cadastrado com sucesso!');
-    // dynamicForm.form.reset()
   }
 
   
